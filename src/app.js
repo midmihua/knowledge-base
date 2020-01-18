@@ -8,6 +8,8 @@ const { logging } = require('./utils/logging');
 const { invalidPath } = require('./routes/api/404');
 const { errorHandling } = require('./middleware/error-handling');
 
+const userRoutes = require('./routes/api/users');
+
 const app = express();
 
 // application/json data
@@ -32,7 +34,7 @@ app.use(compression());
 logging(app);
 
 // Routes
-// TBD
+app.use('/api/user', userRoutes);
 
 // Route does not exist (404)
 app.use(invalidPath);
