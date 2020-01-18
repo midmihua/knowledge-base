@@ -6,7 +6,7 @@ const compression = require('compression');
 
 const { logging } = require('./utils/logging');
 const { invalidPath } = require('./routes/api/404');
-const { errorHandling } = require('./middleware/error-handling');
+const { errorHandling } = require('./middleware/errorHandling');
 
 const userRoutes = require('./routes/api/users');
 
