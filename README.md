@@ -1,6 +1,4 @@
-## knowledge-base
-
-### TBD
+## Knowledge-Base App
 
 ### MongoDB
 

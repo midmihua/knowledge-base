@@ -9,6 +9,7 @@ const { invalidPath } = require('./routes/api/404');
 const { errorHandling } = require('./middleware/errorHandling');
 
 const userRoutes = require('./routes/api/users');
+const linkRoutes = require('./routes/api/links');
 
 const app = express();
 
@@ -35,6 +36,7 @@ logging(app);
 
 // Routes
 app.use('/api/user', userRoutes);
+app.use('/api/link', linkRoutes);
 
 // Route does not exist (404)
 app.use(invalidPath);

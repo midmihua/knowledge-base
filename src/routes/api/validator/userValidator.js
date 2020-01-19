@@ -11,8 +11,8 @@ module.exports.validatePut = (User) => {
                 return User.findOne({ email: value })
                     .then(document => {
                         if (document)
-                            return Promise.reject(notify.fieldExists('email'))
-                    })
+                            return Promise.reject(notify.fieldExists('email'));
+                    });
             })
             .normalizeEmail(),
         body('password')

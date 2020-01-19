@@ -47,9 +47,14 @@ module.exports.signup = async (req, res, next) => {
 
         const result = await user.save();
 
+        if (!result) {
+            const error = new ValidationError(notify.entityNotCreated('New user'), 404);
+            return next(error);
+        }
+
         return res.status(201).json({
             message: notify.entityCreated('User'),
-            userId: result._id
+            result
         });
 
     } catch (error) {

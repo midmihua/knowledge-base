@@ -8,6 +8,26 @@ class Notification {
         return `${entity} created successfully`;
     }
 
+    entityNotCreated(entity) {
+        return `${entity} is not created`;
+    }
+
+    entityUpdated(entity) {
+        return `${entity} updated successfully`;
+    }
+
+    entityNotUpdated(entity) {
+        return `${entity} is not updated`;
+    }
+
+    entityRemoved(entity) {
+        return `${entity} removed successfully`;
+    }
+
+    entityNotRemoved(entity) {
+        return `${entity} is not removed`;
+    }
+
     entityNotFound(entity) {
         return `${entity} can not be found`;
     }
@@ -17,7 +37,11 @@ class Notification {
     }
 
     fieldSymbolsEqualOrMore(field, count) {
-        return `${field} should be ${count} symbols or more`;
+        return `${field} should be ${count} symbol(s) or more`;
+    }
+
+    fieldSymbolsBetween(field, min, max) {
+        return `${field} should be between ${min} and ${max} symbols`;
     }
 
     collectionNotFetched(collection) {
@@ -42,6 +66,10 @@ class Notification {
 
     generalNotAuthenticated() {
         return `You are not authenticated`;
+    }
+
+    paramsIdNotFound(prop) {
+        return `params.${prop} is not provided or does not exist`;
     }
 }
 

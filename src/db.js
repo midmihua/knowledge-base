@@ -11,8 +11,7 @@ const uri = `mongodb://${HOST}:${PORT}/${DB}`;
 const options = {
     useNewUrlParser: true,
     useCreateIndex: true,
-    useUnifiedTopology: true,
-    autoIndex: false
+    useUnifiedTopology: true
 };
 
 module.exports.connect = () => {
