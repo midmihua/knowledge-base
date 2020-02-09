@@ -9,11 +9,13 @@ const linkController = require('../../controllers/api/links');
 
 // @route GET /api/link
 // @desc  Get all links
-router.get('/', isAuthenticated, linkController.getLink);
+router.get('/', linkController.getLink);
+// router.get('/', isAuthenticated, linkController.getLink);
 
 // @route GET /api/link/:id
 // @desc  Get a link
-router.get('/:id', isAuthenticated, linkController.getLink);
+router.get('/:id', linkController.getLink);
+// router.get('/:id', isAuthenticated, linkController.getLink);
 
 // @route POST /api/link
 // @desc  Create a link
