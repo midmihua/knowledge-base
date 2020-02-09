@@ -9,7 +9,8 @@ const userController = require('../../controllers/api/users');
 
 // @route GET /api/user
 // @desc  Get all users
-router.get('/', isAuthenticated, userController.getUsers);
+router.get('/', userController.getUsers);
+// router.get('/', isAuthenticated, userController.getUsers);
 
 // @route PUT /api/user
 // @desc  Signup user
